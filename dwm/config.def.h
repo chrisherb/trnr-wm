@@ -2,6 +2,7 @@
 #include <X11/XF86keysym.h>
 #include "fibonacci.c"
 #include "movestack.c"
+#include "../common/theme.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -14,17 +15,12 @@ static const unsigned int gappx     = 12;
 static const unsigned int snap      = 12;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
-static const char col_dark[]        = "#161616";
-static const char col_mid[]         = "#898989";
-static const char col_bright[]      = "#f5f5f5";
-static const char col_highlight[]   = "#8ff0a4";
+static const char *fonts[]          = { font };
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_bright, col_dark, col_mid },
-	[SchemeSel]  = { col_dark, col_highlight,  col_highlight  },
-	[SchemeBar]  = { NULL, NULL, col_highlight }, /* bar colors */
+	/*               fg             bg              border   */
+	[SchemeNorm] = { color_bright,  color_dark,     color_mid },
+	[SchemeSel]  = { color_dark,    color_primary,  color_primary },
+	[SchemeBar]  = { NULL,          NULL,           color_primary }, /* bar colors */
 };
 
 /* tagging */
@@ -70,7 +66,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_dark, "-nf", col_bright, "-sb", col_highlight, "-sf", col_dark, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon };
 static const char *termcmd[]  = { "alacritty", NULL };
 // Volume control commands
 
