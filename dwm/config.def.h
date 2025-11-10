@@ -5,14 +5,14 @@
 #include "../common/theme.h"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int barpadv   = 12;
-static const unsigned int barpadh   = 12;
+static const unsigned int borderpx  = border;        /* border pixel of windows */
+static const unsigned int barpadv   = gap;
+static const unsigned int barpadh   = gap;
 static const unsigned int barheight = 0;       /* height of the bar */
-static const unsigned int barborder = 1;	/* border pixel of the bar */
+static const unsigned int barborder = border;	/* border pixel of the bar */
 static const unsigned int floatbar  = 1;        /* 0 means no bar on floating windows */
-static const unsigned int gappx     = 12;
-static const unsigned int snap      = 12;       /* snap pixel */
+static const unsigned int gappx     = gap;
+static const unsigned int snap      = gap;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { font };

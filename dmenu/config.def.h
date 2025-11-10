@@ -26,5 +26,5 @@ static unsigned int lines      = 10;
  */
 static const char worddelimiters[] = " ";
 
-static unsigned int border_width = 1;
+static unsigned int border_width = border;
 
