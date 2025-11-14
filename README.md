@@ -8,7 +8,7 @@ In order to build trnr-wm you need the Xlib header files.
 
 For debian:
 ```
-sudo apt install libx11-dev
+sudo apt install libx11-dev libxft-dev libxinerama-dev
 ```
 
 ## Installation
