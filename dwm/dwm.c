@@ -2318,13 +2318,7 @@ wintomon(Window w)
 int
 xerror(Display *dpy, XErrorEvent *ee)
 {
-    // avoid crashing because of big glyphs (emojis) that don't fit title bar
-	int opcode, event, error;
-	if (XQueryExtension(dpy, "RENDER", &opcode, &event, &error) ||
-		(ee->request_code == opcode && ee->error_code == BadLength))
- 		return 0;
-
-	if (ee->error_code == BadWindow
+    if (ee->error_code == BadWindow
 	|| (ee->request_code == X_SetInputFocus && ee->error_code == BadMatch)
 	|| (ee->request_code == X_PolyText8 && ee->error_code == BadDrawable)
 	|| (ee->request_code == X_PolyFillRectangle && ee->error_code == BadDrawable)
