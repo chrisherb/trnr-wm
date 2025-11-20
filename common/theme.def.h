@@ -3,7 +3,7 @@ static const char color_mid[] = "#898989";
 static const char color_bright[] = "#f5f5f5";
 static const char color_primary[] = "#8ff0a4";
 
-static const char font[] = "monospace:size=10:weight=demibold";
+static const char font[] = "monospace:size=10:weight=medium";
 
 static const unsigned int border = 1;
 
